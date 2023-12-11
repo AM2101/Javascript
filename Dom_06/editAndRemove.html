@@ -6,6 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <ul class="language">
+        <li>javascript</li>
+
+    </ul>
 </body>
+
+<script>
+
+    // add Element
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang('java');
+    addLang('python');
+    addLang('php');
+    
+    //Edit
+    const secondtLang = document.querySelector('li:nth-child(2)')
+    const newli = document.createElement("li")
+    newli.textContent = 'ruby'
+    secondtLang.replaceWith(newli) 
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+
+</script>
+
 </html>
